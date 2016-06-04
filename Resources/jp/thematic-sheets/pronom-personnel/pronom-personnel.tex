@@ -1,0 +1,115 @@
+\documentclass[a4paper,11pt,final]{article}
+
+% Packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{watermark}
+\usepackage{xeCJK}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% Page dimensions
+\setlength\textheight{25.5cm}
+\setlength\textwidth{17.5cm}
+\setlength\oddsidemargin{-0.5cm}
+\setlength\topmargin{-15mm}
+\setlength\headheight{0mm}
+\setlength\parindent{0.0cm}
+\setlength\parskip{0.5cm}
+
+% Style and fonts
+\pagestyle{empty}
+\urlstyle{sf}
+\setmainfont{Cambria}
+\setCJKmainfont{ipaexm.ttf}
+
+% New colors
+\definecolor{titleblue}{rgb}{0,0.2,0.4}
+\definecolor{numberred}{rgb}{0.5,0,0}
+\definecolor{sectionblue}{rgb}{0.1,0.3,0.7}
+\definecolor{lightlightgray}{gray}{0.9}
+
+% New commands
+\renewcommand{\arraystretch}{1.3}
+\newcommand{\trig}{\color{sectionblue}$\blacktriangleright$}
+\newcommand{\sectit}[1]{\bigskip\hspace{-5mm}{\color{sectionblue}$\blacksquare$~~\Large\bfseries #1}}
+\newcommand{\romaji}[1]{{\footnotesize[#1]}}
+
+\begin{document}
+	\rightwatermark{
+		\begin{tikzpicture}[overlay]
+			\draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
+			\node at (17.5,-27.8) {\color{white}\thepage};
+			\node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{\includegraphics[width=2cm]{images/by-nc-nd.pdf}}~~\small poly.glot, 2016.};
+		\end{tikzpicture}
+	}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Compter de 1 à 10
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\begin{tikzpicture}[overlay]
+	\draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
+	\node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Pronom personnel};
+	% https://openclipart.org/detail/188548/people-silhouettes-60s-crowd
+	\node[anchor=south east] at (2.5,-1.15) {\includegraphics[width=3cm]{images/peoplesilhouettes-200px.png}};
+\end{tikzpicture}\vspace{15mm}
+	
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Il n'y a pas vraiment de pronom personnel en japonais. Les mots que l'on peut considérer comme des pronoms personnels se comportent en réalité comme des noms. Par exemple, 私 \romaji{watashi} signifie \textit{\og je \fg}, mais également \textit{\og moi \fg}. De plus, il y a parfois plusieurs mots pour le même pronom, permettant de révéler des informations sur le type de relation que vous voulez entretenir avec votre interlocuteur, ou le niveau de politesse (registre de langue) souhaité.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Pronoms personnels communs}
+
+Le tableau suivant reprend les mots les plus communs pour désigner des personnes. On peut remarquer que les formes plurielles sont ici construites en ajoutant たち \romaji{tachi}, sauf pour la 3\ieme{} personne du pluriel masculin. Les formes présentées ci-dessous sont considérées comme polies et mixtes.
+	
+\hspace{5mm}\begin{tabular}{|p{1.5cm}p{2cm}p{4.5cm}}
+	Je			& 私			& わたし \romaji{watashi} \\
+	Tu			& 貴方		& あなた \romaji{anata} \\
+	Il			& 彼			& かれ \romaji{kare} \\
+	Elle		& 彼女		& かのじょ \romaji{kanojo} \\
+	Nous		& 私たち		& わたしたち \romaji{watashitachi} \\
+	Vous		& 			& あなたたち \romaji{anatatachi} \\
+	Ils			& 彼ら		& かれら \romaji{karera} \\
+	Elles		& 彼女たち	& かのじょたち \romaji{kanojotachi}
+\end{tabular}
+
+Lorsqu'il s'agit de désigner un objet, la 3\ieme{} personne à utiliser est それ \romaji{sore}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Autres pronoms}
+
+D'autres pronoms peuvent être utilisés pour les 1\iere{} et 2\ieme{} personnes, en fonction du niveau de politesse, mais également du genre des personnes impliquées dans la conversation.
+
+\textbf{Je}
+
+\vspace{-7mm}
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+	\multicolumn{1}{l}{}&& \it\small Utilisation \\
+	私			& わたくし \romaji{watakushi}			& Très poli (par les hommes d'affaire, par exemple) \\
+	僕			& ぼく \romaji{boku}					& Courant (par les hommes) \\
+				& あたち \romaji{atachi}				& Courant (par les femmes) \\
+	俺			& おれ \romaji{ore}					& Familier
+\end{tabular}
+
+\textbf{Tu}
+
+\vspace{-7mm}
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+	\multicolumn{1}{l}{}&& \it\small Utilisation \\
+	君			& きみ \romaji{kimi}					& Familier (envers une personne de rang inférieur) \\
+	お前			& おまえ \romaji{omae}				& Très familier (avec un sentiment détaché)
+\end{tabular}
+
+Il convient de faire très attention lorsqu'on utilise la 2\ieme{} personne pour éviter de choquer ou blesser son interlocuteur. On préfèrera utiliser le nom de la personne suivi de さん \romaji{san}, suffixe neutre de politesse. Souvent on sera même plus radical en omettant ces pronoms, lorsque le contexte permet de les identifier.
+
+\end{document}

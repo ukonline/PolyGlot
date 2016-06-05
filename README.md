@@ -4,7 +4,7 @@ PolyGlot is an online platform that allows people to learn languages. The learni
 
 ## Available Languages
 
-- Japanese
+- [Japanese](Resources/jp/README.md)
 
 ## Contributors
 

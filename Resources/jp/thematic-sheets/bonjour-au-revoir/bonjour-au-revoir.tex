@@ -8,6 +8,7 @@
 
 \usepackage{graphicx}
 \usepackage{tikz,pgf}
+	\usetikzlibrary{arrows,decorations.pathreplacing}
 \usepackage{array}
 \usepackage{amssymb}
 \usepackage{watermark}
@@ -69,16 +70,35 @@ Il y a plusieurs façons de dire \textit{bonjour} en japonais, qui dépendent no
 
 \sectit{Au long de la journée}
 
-La première distinction qu'on peut faire concerne le moment de la journée où on rencontre pour la première fois la personne à qui on dit bonjour. Cette notion du moment de la journée est importante au Japon.
+La première distinction qu'on peut faire concerne le moment de la journée où on rencontre pour la première fois la personne à qui on dit bonjour. Cette notion du moment de la journée est importante au Japon, tout comme le fait qu'il faille s'incliner lorsqu'on salue quelqu'un.
 
 \hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
 	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-	今日は			& こんにちは \romaji{konnichiwa}		& À tout moment (générique) \\
-	お早う			& おはよう \romaji{ohay\=o}			& Dans la matinée (avant le lunch) \\
-	今晩は			& こんばんは \romaji{konbanwa}		& Dans la soirée (après le souper)
+	お早う			& おはよう \romaji{ohay\=o}				& Dans la matinée (avant le lunch) \\
+	今日は			& こんにちは \romaji{konnichiwa}			& Durant l'après-midi (générique) \\
+	今晩は			& こんばんは \romaji{konbanwa}			& Dans la soirée (après le souper)
 \end{tabular}
 
-On notera qu'on utilisera sans soucis こんにちは \romaji{konnichiwa} entre le lunch et le souper. De plus, on n'utilise おはよう \romaji{ohay\=o} qu'avec des amis ou des personnes familières (famille, . La version polie générale à utiliser est おはようございます \romaji{ohay\=o gozaimasu}. Enfin, lorsqu'on dit bonjour à quelqu'un au téléphone, c'est-à-dire au moment où on décroche, on utilisera plutôt もしもし \romaji{mochimochi}.
+On notera qu'on utilisera sans soucis こんにちは \romaji{konnichiwa} entre le lunch (pas avant) et le souper (pas après). De plus, on n'utilise おはよう \romaji{ohay\=o} qu'avec des amis ou proches, la version polie étant おはよう ございます \romaji{ohay\=o gozaimasu}. Enfin, lorsqu'on dit bonjour à quelqu'un au téléphone, c'est-à-dire au moment où on décroche, on utilisera plutôt もしもし \romaji{mochimochi}, utilisé donc par la personne appelée.
+
+\begin{center}
+\scalebox{0.9}{\begin{tikzpicture}
+	\useasboundingbox (-0.2,-1.2) rectangle (11.2,1.5);
+	\draw[-angle 60,line width=0.5mm] (0,0) -- (11,0);
+	\draw[line width=0.5mm] (2,-0.2) -- (2,0.2);
+	\node[anchor=south] at (2,0.2) {\small 12h};
+	\draw[line width=0.5mm] (3,-0.2) -- (3,0.2);
+	\node[anchor=south] at (3,0.2) {\small 13h};
+	\draw[line width=0.5mm] (8,-0.2) -- (8,0.2);
+	\node[anchor=south] at (8,0.2) {\small 18h};
+	\draw[line width=0.5mm] (9,-0.2) -- (9,0.2);
+	\node[anchor=south] at (9,0.2) {\small 19h};
+	%%%
+	\draw (3,-0.5) edge[decorate,decoration=brace] node[below=2mm] {おはよう ございます} (0,-0.5);
+	\draw (2,0.8) edge[decorate,decoration=brace] node[above=2mm] {こんにちは} (9,0.8);
+	\draw (10.95,-0.5) edge[decorate,decoration=brace] node[below=2mm] {こんばんは} (8,-0.5);
+\end{tikzpicture}}
+\end{center}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -86,21 +106,12 @@ On notera qu'on utilisera sans soucis こんにちは \romaji{konnichiwa} entre 
 
 \hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
 	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-	押忍				& おっす \romaji{ossu}				& Entre amis proches (homme) \\
-	久しぶり			& ひさしぶり \romaji{hisashiburi}		& Ami ou membre de la famille pas revu depuis longtemps \\
+					& やあ \romaji{y\=a} / よう \romaji{y\=o}	& Entre amis (familier) \\
+	押忍				& おっす \romaji{ossu}					& Entre amis proches (homme) \\
+	最近どう？		& さいきんどう？ \romaji{saikin d\=o?}		& Proche ou collaborateur \\
+	久しぶり			& ひさしぶり \romaji{hisashiburi}			& Ami ou proche pas revu depuis longtemps
 \end{tabular}
 
-On pourrait traduire ひさしぶり \romaji{hisashiburi} par \og\textit{Ça fait longtemps}\fg, et on l'utilisera donc parfois après avoir dit simplement bonjour.
-
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-\sectit{Situation spécifique}
-
-\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
-	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-					& いらっしゃい \romaji{irasshai}		& Dans les magasins (signale la Bienvenue)
-\end{tabular}
-
-On utilisera aussi いらっしゃいませ \romaji{irasshaimase} pour souhaiter la bienvenue dans les magasins.
+Entre amis, il est commun d'utiliser やあ \romaji{y\=a} ou よう \romaji{y\=o}, voire même de ne même pas se saluer et directement entamer la conversation. Les deux derniers mots présentés ci-dessus seront parfois utilisé après avoir dit simplement bonjour, bien qu'on puisse les utiliser seul. On peut traduire さいきんどう？ \romaji{saikin d\=o?} par \og\textit{Quelles nouvelles ?}\fg{} et ひさしぶり \romaji{hisashiburi} par \og\textit{Ça fait longtemps qu'on ne s'est pas vus!}\fg.
 
 \end{document}

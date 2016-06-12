@@ -1,0 +1,106 @@
+\documentclass[a4paper,11pt,final]{article}
+
+% Packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{watermark}
+\usepackage{xeCJK}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% Page dimensions
+\setlength\textheight{25.5cm}
+\setlength\textwidth{17.5cm}
+\setlength\oddsidemargin{-0.5cm}
+\setlength\topmargin{-15mm}
+\setlength\headheight{0mm}
+\setlength\parindent{0.0cm}
+\setlength\parskip{0.5cm}
+
+% Style and fonts
+\pagestyle{empty}
+\urlstyle{sf}
+\setmainfont{Cambria}
+\setCJKmainfont{ipaexm.ttf}
+
+% New colors
+\definecolor{titleblue}{rgb}{0,0.2,0.4}
+\definecolor{numberred}{rgb}{0.5,0,0}
+\definecolor{sectionblue}{rgb}{0.1,0.3,0.7}
+\definecolor{lightlightgray}{gray}{0.9}
+
+% New commands
+\renewcommand{\arraystretch}{1.3}
+\newcommand{\trig}{\color{sectionblue}$\blacktriangleright$}
+\newcommand{\sectit}[1]{\bigskip\hspace{-5mm}{\color{sectionblue}$\blacksquare$~~\Large\bfseries #1}}
+\newcommand{\romaji}[1]{{\footnotesize[#1]}}
+
+\begin{document}
+	\rightwatermark{
+		\begin{tikzpicture}[overlay]
+			\draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
+			\node at (17.5,-27.8) {\color{white}\thepage};
+			\node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{\includegraphics[width=2cm]{images/by-nc-nd.pdf}}~~\small poly.glot, 2016.};
+		\end{tikzpicture}
+	}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Dire bonjour
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\begin{tikzpicture}[overlay]
+	\draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
+	\node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Dire bonjour};
+	% https://openclipart.org/detail/247271/man-hello
+	\node[anchor=south east] at (2.5,-1.15) {\includegraphics[width=1.5cm]{images/hombre-hello-remix-cyberscooty-200px.png}};
+\end{tikzpicture}\vspace{15mm}
+	
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Il y a plusieurs façons de dire \textit{bonjour} en japonais, qui dépendent notamment du moment de la journée et de la personne à qui on s'adresse. De manière générique, on utilise こんにちは \romaji{konnichiwa} pour dire bonjour.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Au long de la journée}
+
+La première distinction qu'on peut faire concerne le moment de la journée où on rencontre pour la première fois la personne à qui on dit bonjour. Cette notion du moment de la journée est importante au Japon.
+
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+	\multicolumn{1}{l}{}&& \it\small Utilisation \\
+	今日は			& こんにちは \romaji{konnichiwa}		& À tout moment (générique) \\
+	お早う			& おはよう \romaji{ohay\=o}			& Dans la matinée (avant le lunch) \\
+	今晩は			& こんばんは \romaji{konbanwa}		& Dans la soirée (après le souper)
+\end{tabular}
+
+On notera qu'on utilisera sans soucis こんにちは \romaji{konnichiwa} entre le lunch et le souper. De plus, on n'utilise おはよう \romaji{ohay\=o} qu'avec des amis ou des personnes familières (famille, . La version polie générale à utiliser est おはようございます \romaji{ohay\=o gozaimasu}. Enfin, lorsqu'on dit bonjour à quelqu'un au téléphone, c'est-à-dire au moment où on décroche, on utilisera plutôt もしもし \romaji{mochimochi}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Discours informel}
+
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+	\multicolumn{1}{l}{}&& \it\small Utilisation \\
+	押忍				& おっす \romaji{ossu}				& Entre amis proches (homme) \\
+	久しぶり			& ひさしぶり \romaji{hisashiburi}		& Ami ou membre de la famille pas revu depuis longtemps \\
+\end{tabular}
+
+On pourrait traduire ひさしぶり \romaji{hisashiburi} par \og\textit{Ça fait longtemps}\fg, et on l'utilisera donc parfois après avoir dit simplement bonjour.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Situation spécifique}
+
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+	\multicolumn{1}{l}{}&& \it\small Utilisation \\
+					& いらっしゃい \romaji{irasshai}		& Dans les magasins (signale la Bienvenue)
+\end{tabular}
+
+On utilisera aussi いらっしゃいませ \romaji{irasshaimase} pour souhaiter la bienvenue dans les magasins.
+
+\end{document}

@@ -6,6 +6,7 @@ This repository contains resources to learn Japanese for French speaking people.
 
 - Counting from 1 to 10
 - Personal pronoun
+- Saying hello
 
 ## Contributors
 

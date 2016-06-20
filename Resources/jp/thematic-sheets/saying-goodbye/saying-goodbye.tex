@@ -1,6 +1,6 @@
 % saying-goodbye.tex
 % Author: Sébastien Combéfis
-% Version: June 19, 2016
+% Version: June 20, 2016
 
 \documentclass[a4paper,11pt,final]{article}
 
@@ -12,7 +12,6 @@
 
 \usepackage{graphicx}
 \usepackage{tikz,pgf}
-	\usetikzlibrary{arrows,decorations.pathreplacing}
 \usepackage{array}
 \usepackage{amssymb}
 \usepackage{watermark}
@@ -48,66 +47,93 @@
 \newcommand{\romaji}[1]{{\footnotesize[#1]}}
 
 \begin{document}
-	\rightwatermark{
-		\begin{tikzpicture}[overlay]
-			\draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
-			\node at (17.5,-27.8) {\color{white}\thepage};
-			\node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{\includegraphics[width=2cm]{images/by-nc-nd.pdf}}~~\small poly.glot, 2016.};
-		\end{tikzpicture}
-	}
 
-% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\rightwatermark{
+    \begin{tikzpicture}[overlay]
+        \draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
+        \node at (17.5,-27.8) {\color{white}\thepage};
+        \node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{%
+        \includegraphics[width=2cm]{images/by-nc-nd.pdf}}%
+        ~~\small poly.glot, 2016.};
+    \end{tikzpicture}
+}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 % Dire au revoir
-% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 \begin{tikzpicture}[overlay]
-	\draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
-	\node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Dire au revoir};
-	% https://openclipart.org/detail/21857/comic-characters-bye
-	\node[anchor=south east] at (3,-1.15) {\includegraphics[width=3cm]{images/nicubunu-Comic-characters-Bye-200px.png}};
+    \draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
+    \node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Dire au revoir};
+    % https://openclipart.org/detail/21857/comic-characters-bye
+    \node[anchor=south east] at (3,-1.15) {\includegraphics[width=3cm]%
+    {images/nicubunu-Comic-characters-Bye-200px.png}};
 \end{tikzpicture}\vspace{15mm}
-	
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Il y a plusieurs façons de dire \textit{au revoir} en japonais, qui dépendent du type d'au revoir et de la personne à qui on s'adresse. De manière générique, on utilise さようなら \romaji{say\=onara} pour dire au revoir.
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Il y a plusieurs façons de dire \textit{au revoir} en japonais, qui dépendent
+du type d'au revoir et de la personne à qui on s'adresse. De manière générique,
+on utilise さようなら \romaji{say\=onara} pour dire au revoir.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \sectit{Selon la situation}
 
-La première distinction qu'on peut faire concerne le type d'au revoir que l'on fait. Cette nuance ainsi apportée est importante au Japon, car elle apporte plus d'informations qu'un simple au revoir.
+La première distinction qu'on peut faire concerne le type d'au revoir que l'on
+fait. Cette nuance ainsi apportée est importante au Japon, car elle apporte
+plus d'informations qu'un simple au revoir.
 
 \hspace{5mm}\begin{tabular}{|p{3.25cm}p{5cm}l}
-	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-	左様なら			& さようなら \romaji{say\=onara}			& Peu utilisé (générique) \\
-	行って来ます		& いってきます \romaji{itte kimasu}		& En quittant la maison (celui qui quitte) \\
-	行ってらっしゃい	& いってらっしゃい \romaji{itte rasshai}	& En quittant la maison (celui qui reste) \\
-	また明日			& またあした \romaji{mata ashita}			& À demain \\
-	また来週			& またらいしゅう \romaji{mata raish\=u}	& À la semaine prochaine \\
-	お休みなさい		& おやすみなさい \romaji{oyasumi nasai}	& Bonne nuit
+    \multicolumn{1}{l}{}&& \it\small Utilisation \\
+    左様なら              & さようなら \romaji{say\=onara}            & Peu
+    utilisé (générique) \\
+    行って来ます        & いってきます \romaji{itte kimasu}        & En
+    quittant la maison (celui qui quitte) \\
+    行ってらっしゃい  & いってらっしゃい \romaji{itte rasshai} & En quittant la
+    maison (celui qui reste) \\
+    また明日              & またあした \romaji{mata ashita}           & À
+    demain \\
+    また来週              & またらいしゅう \romaji{mata raish\=u}   & À la
+    semaine prochaine \\
+    お休みなさい        & おやすみなさい \romaji{oyasumi nasai}   & Bonne nuit
 \end{tabular}
 
-On notera qu'on peut mettre en évident le moment où l'on reverra la personne qu'on quitte en commençant avec また \romaji{mata} qu'on peut traduire par \og\textit{À...}\fg. Enfin, on utilise おやすみなさい \romaji{oyasumi nasai} lorsqu'on dit au revoir à quelqu'un à l'heure où on va usuellement dormir. Lorsqu'on quitte quelqu'un pour une plus longue durée et qu'on veut lui souhaiter de prendre soin de lui, il existe une série d'autres formules.
+On notera qu'on peut mettre en évident le moment où l'on reverra la personne
+qu'on quitte en commençant avec また \romaji{mata} qu'on peut traduire par
+\og\textit{À...}\fg. Enfin, on utilise おやすみなさい \romaji{oyasumi nasai}
+lorsqu'on dit au revoir à quelqu'un à l'heure où on va usuellement dormir.
+Lorsqu'on quitte quelqu'un pour une plus longue durée et qu'on veut lui
+souhaiter de prendre soin de lui, il existe une série d'autres formules.
 
 \hspace{5mm}\begin{tabular}{|p{2.5cm}p{5cm}l}
-	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-	気をつけて		& きをつけて \romaji{ki wo tsukete}		& Quelqu'un qui quitte la maison, part en vacances  \\
-	元気で			& げんきで \romaji{genki de}				& Quelqu'un qui part en voyage ou déménage loin \\
-	お大事に			& おだいじに \romaji{odaiji ni}			& Quelqu'un qui est malade
+    \multicolumn{1}{l}{}&& \it\small Utilisation \\
+    気をつけて  & きをつけて \romaji{ki wo tsukete}    & Quelqu'un qui quitte
+    la maison, part en vacances  \\
+    元気で        & げんきで \romaji{genki de}            & Quelqu'un qui part
+    en voyage ou déménage loin \\
+    お大事に     & おだいじに \romaji{odaiji ni}        & Quelqu'un qui est
+    malade
 \end{tabular}
 
-Les deux premières expressions peuvent se traduire par \og\textit{Prends soin de toi.}\fg{}, \og\textit{Je te souhaite le meilleur.}\fg{} et la dernière par \og\textit{Bon rétablissement.}\fg{}.
+Les deux premières expressions peuvent se traduire par \og\textit{Prends soin
+de toi.}\fg{}, \og\textit{Je te souhaite le meilleur.}\fg{} et la dernière par
+\og\textit{Bon rétablissement.}\fg{}.
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \sectit{Discours informel}
 
 \hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
-	\multicolumn{1}{l}{}&& \it\small Utilisation \\
-					& じゃあね \romaji{j\=a ne}				& Entre amis (familier) \\
-					& またね \romaji{mata ne}					& Entre amis (familier) \\
-					& バイバイ \romaji{bai bai}				& Jeunes filles (familier)
+    \multicolumn{1}{l}{}&& \it\small Utilisation \\
+    & じゃあね \romaji{j\=a ne}    & Entre amis (familier) \\
+    & またね \romaji{mata ne}       & Entre amis (familier) \\
+    & バイバイ \romaji{bai bai}    & Jeunes filles (familier)
 \end{tabular}
 
-Entre amis, il est commun d'utiliser じゃあね \romaji{j\=a ne}, voire バイバイ \romaji{bai bai} entre filles qu'on peut traduire par \og\textit{Ciao.}\fg{} ou \og\textit{Bye bye.}\fg{} De plus, on peut se limiter à じゃあね \romaji{j\=a} et またね \romaji{mata} avec des proches. On peut également utiliser またね \romaji{mata ne} qu'on peut traduire par \og\textit{À plus (tard).}\fg{}
+Entre amis, il est commun d'utiliser じゃあね \romaji{j\=a ne}, voire バイバイ
+\romaji{bai bai} entre filles qu'on peut traduire par \og\textit{Ciao.}\fg{} ou
+\og\textit{Bye bye.}\fg{} De plus, on peut se limiter à じゃあね \romaji{j\=a}
+et またね \romaji{mata} avec des proches. On peut également utiliser またね
+\romaji{mata ne} qu'on peut traduire par \og\textit{À plus (tard).}\fg{}
 
 \end{document}

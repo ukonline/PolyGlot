@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 # Author: Sébastien Combéfis
-# Version: June 21, 2016
+# Version: June 22, 2016
 
-from flask import Flask
+import cherrypy
 
-app = Flask('PolyGlot')
-
-@app.route('/')
-def main():
-    return 'PolyGlot'
+class PolyGlot:
+    def index(self):
+        return 'PolyGlot'
+    index.exposed = True
 
 if __name__ == '__main__':
-    app.run()
+    cherrypy.quickstart(PolyGlot())

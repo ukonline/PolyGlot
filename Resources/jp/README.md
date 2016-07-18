@@ -5,7 +5,9 @@ This repository contains resources to learn Japanese for French speaking people.
 ## Thematic Sheets
 
 - Counting from 1 to 10
+- Day of the week
 - Personal pronoun
+- Saying goodbye
 - Saying hello
 
 ## Contributors

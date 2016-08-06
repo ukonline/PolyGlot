@@ -4,7 +4,9 @@ This repository contains resources to learn Japanese for French speaking people.
 
 ## Thematic Sheets
 
+- Close members of another family
 - Counting from 1 to 10
+- Counting from 11 to 100
 - Day of the week
 - Personal pronoun
 - Saying goodbye

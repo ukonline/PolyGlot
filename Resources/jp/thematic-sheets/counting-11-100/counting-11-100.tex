@@ -1,0 +1,131 @@
+% counting-11-100.tex
+% Author: Sébastien Combéfis
+% Version: August 6, 2016
+
+\documentclass[a4paper,11pt,final]{article}
+
+% Packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{watermark}
+\usepackage{xeCJK}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% Page dimensions
+\setlength\textheight{25.5cm}
+\setlength\textwidth{17.5cm}
+\setlength\oddsidemargin{-0.5cm}
+\setlength\topmargin{-15mm}
+\setlength\headheight{0mm}
+\setlength\parindent{0.0cm}
+\setlength\parskip{0.5cm}
+
+% Style and fonts
+\pagestyle{empty}
+\urlstyle{sf}
+\setmainfont{Cambria}
+\setCJKmainfont{ipaexm.ttf}
+
+% New colors
+\definecolor{titleblue}{rgb}{0,0.2,0.4}
+\definecolor{numberred}{rgb}{0.5,0,0}
+\definecolor{sectionblue}{rgb}{0.1,0.3,0.7}
+\definecolor{lightlightgray}{gray}{0.9}
+
+% New commands
+\renewcommand{\arraystretch}{1.3}
+\newcommand{\trig}{\color{sectionblue}$\blacktriangleright$}
+\newcommand{\sectit}[1]{\bigskip\hspace{-5mm}{\color{sectionblue}%
+$\blacksquare$~~\Large\bfseries #1}}
+\newcommand{\romaji}[1]{{\footnotesize[#1]}}
+
+\begin{document}
+
+\rightwatermark{
+    \begin{tikzpicture}[overlay]
+        \draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
+        \node at (17.5,-27.8) {\color{white}\thepage};
+        \node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{%
+        \includegraphics[width=2cm]{images/by-nc-nd.pdf}}%
+        ~~\small poly.glot, 2016.};
+    \end{tikzpicture}
+}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Compter de 11 à 100
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\begin{tikzpicture}[overlay]
+    \draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
+    \node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Compter de 11 à 100};
+    % https://openclipart.org/detail/168838/seven-segment-display-gray-7
+    \node[anchor=south east] at (1.9,-0.9) {\includegraphics[width=1.2cm]%
+    {images/Seven-segment-display-gray-7-200px.png}};
+    \node[anchor=south east] at (3.1,-0.9) {\includegraphics[width=1.2cm]%
+    {images/Seven-segment-display-gray-7-200px.png}};
+\end{tikzpicture}\vspace{15mm}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Sachant compter de 1 à 10, il est assez immédiat de compter de 11 à 100. Pour
+compter de 11 à 19, on fait suivre じゅう \romaji{j\=u} du chiffre des unités :
+\vspace{-5mm}
+\begin{center}
+	\fbox{\rule[-4mm]{0mm}{1cm}\parbox{15cm}{\centering\bf じゅう
+	\romaji{j\=u} + unités}}
+\end{center}
+
+Par exemple, 11 se dit じゅういち \romaji{j\=u ichi} et 17 se dit じゅうなな
+\romaji{j\=u nana} ou じゅうしち \romaji{j\=u shichi}. Pour les nombres de 20
+à 99, il suffit d'ajouter le chiffre des dizaines :
+\vspace{-5mm}
+\begin{center}
+	\fbox{\rule[-4mm]{0mm}{1cm}\parbox{15cm}{\centering\bf dizaines + じゅう
+	\romaji{j\=u} (+ unités)}}
+\end{center}
+
+Par exemple, 32 se dit さんじゅうに \romaji{san j\=u ni} et 86 se dit
+はちじゅうろく \romaji{hachi j\=u roku}. Notez que pour les dizaines, il est
+interdit d'utiliser les lectures alternatives pour 4, 7 et 9; on doit donc
+respectivement utiliser よん \romaji{yon}, なな \romaji{nana} et
+きゅう \romaji{ky\=u}. Enfin, le nombre 100 se dit ひゃく \romaji{hyaku}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Les dizaines}
+
+\hspace{5mm}\begin{tabular}{|p{1.5cm}p{1.5cm}p{4cm}}
+    10    & 十    & じゅう \romaji{j\=u} \\
+    20    & 二十    & にじゅう \romaji{ni j\=u} \\
+    30    & 三十    & さんじゅう \romaji{san j\=u} \\
+    40    & 四十    & よんじゅう \romaji{yon j\=u} \\
+    50    & 五十    & ごじゅう \romaji{go j\=u} \\
+    60    & 六十    & ろくじゅう \romaji{roku j\=u} \\
+    70    & 七十    & ななじゅう \romaji{nana j\=u} \\
+    80    & 八十    & はちじゅう \romaji{hachi j\=u} \\
+    90    & 九十    & きゅうじゅう \romaji{ky\=u j\=u} \\
+    100   & 百    & ひゃく \romaji{hyaku}
+\end{tabular}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Écriture}
+
+Pour des documents officiels légaux ou financiers, il existe également un kanji
+complexe pour 100, pour en empêcher la falsification. Il n'est cependant que
+peu utilisé en japonais, 百 étant suffisamment complexe.
+
+\hspace{5mm}\begin{tabular}{|l*{1}{p{1cm}}}
+    \multicolumn{1}{l}{} & 100 \\
+    \it\small Écriture commune & 百 \\
+    \it\small Écriture complexe & 佰
+\end{tabular}
+
+\end{document}

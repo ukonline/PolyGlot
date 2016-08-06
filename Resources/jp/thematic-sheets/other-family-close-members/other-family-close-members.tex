@@ -1,0 +1,141 @@
+% other-family-close-members.tex
+% Author: Sébastien Combéfis
+% Version: August 6, 2016
+
+\documentclass[a4paper,11pt,final]{article}
+
+% Packages
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+\usepackage{tikz,pgf}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{watermark}
+\usepackage{xeCJK}
+\usepackage{wasysym}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+% Page dimensions
+\setlength\textheight{25.5cm}
+\setlength\textwidth{17.5cm}
+\setlength\oddsidemargin{-0.5cm}
+\setlength\topmargin{-15mm}
+\setlength\headheight{0mm}
+\setlength\parindent{0.0cm}
+\setlength\parskip{0.5cm}
+
+% Style and fonts
+\pagestyle{empty}
+\urlstyle{sf}
+\setmainfont{Cambria}
+\setCJKmainfont{ipaexm.ttf}
+
+% New colors
+\definecolor{titleblue}{rgb}{0,0.2,0.4}
+\definecolor{numberred}{rgb}{0.5,0,0}
+\definecolor{sectionblue}{rgb}{0.1,0.3,0.7}
+\definecolor{lightlightgray}{gray}{0.9}
+
+% New commands
+\renewcommand{\arraystretch}{1.3}
+\newcommand{\trig}{\color{sectionblue}$\blacktriangleright$}
+\newcommand{\sectit}[1]{\bigskip\hspace{-5mm}{\color{sectionblue}$\blacksquare$~~\Large\bfseries #1}}
+\newcommand{\romaji}[1]{{\footnotesize[#1]}}
+
+\begin{document}
+
+\rightwatermark{
+    \begin{tikzpicture}[overlay]
+        \draw[draw=none,fill=numberred] (17,-28.7) rectangle (18,-27.2);
+        \node at (17.5,-27.8) {\color{white}\thepage};
+        \node[anchor=west] at (-1.5,-28) {\raisebox{-0.5mm}{%
+        \includegraphics[width=2cm]{images/by-nc-nd.pdf}}%
+        ~~\small poly.glot, 2016.};
+    \end{tikzpicture}
+}
+
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+% Membres proches d'une autre famille
+% = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+\begin{tikzpicture}[overlay]
+    \draw[draw=none,fill=titleblue] (4,-1) rectangle (19,1.5);
+    \node[anchor=east] at (18,0.2) {\color{white}\Huge\sl Membres proches d'une
+    autre famille};
+    % https://openclipart.org/detail/188816/family-bw-version
+    \node[anchor=south east] at (3,-1.15) {\includegraphics[width=3cm]%
+	{images/bw-family-400px.png}};
+\end{tikzpicture}\vspace{15mm}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Il y a deux façons de s'adresser aux membres d'une famille en japonais, selon
+qu'il s'agisse de parler des membres de sa famille à d'autres personnes ou
+de parler des membres de la famille d'une autre personne. Famille se dit
+家族/かぞく \romaji{kazoku} en japonais; ce terme voulant également dire
+\textit{\og membres de la famille \fg}. Lorsqu'on parle des membres d'une autre
+famille, on utilisera le mot formel ご家族/ごかぞく \romaji{gokazoku}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Membres proches}
+
+Le diagramme suivant reprend les termes utilisés pour parler des \emph{membres
+proches d'une famille d'une autre personne}. On remarquera qu'il y a une
+nuance, en japonais, entre les grands et petits frères et s\oe urs.
+
+\begin{center}
+\scalebox{0.9}{\begin{tikzpicture}[box/.style={draw,shape=rectangle}]
+    \useasboundingbox (-3,-0.75) rectangle (3.5,3.5);
+    \node[box] (me) at (0,0) {私};
+    \node[box] (older-bro) at (-2,0.5) {お兄さん};
+    \node[box] (younger-bro) at (-2,-0.5) {弟さん};
+    \node[box] (older-sis) at (2,0.5) {お姉さん};
+    \node[box] (younger-sis) at (2,-0.5) {妹さん};
+    \node[box] (father) at (-1.25,2) {お父さん};
+    \node[box] (mother) at (1.25,2) {お母さん};
+    \node[box] (grand-father) at (0,3) {お爺さん};
+    \node[box] (grand-mother) at (2.5,3) {お婆さん};
+    %%%
+    \draw (father) -- (-1.25,1.5) -- (1.25,1.5) -- (mother);
+    \draw (0,1.5) -- (me);
+    \draw (older-bro) -- (-2,1) -- (2,1) -- (older-sis);
+    \draw (older-bro) -- (younger-bro);
+    \draw (older-sis) -- (younger-sis);
+    \draw (grand-father) -- (0,2.5) -- (2.5,2.5) -- (grand-mother);
+    \draw (1.25,2.5) -- (mother);
+    %%%
+    \node at (-2,-1.25) {\mars};
+    \node at (2,-1.25) {\female};
+\end{tikzpicture}}
+\end{center}
+
+On remarquera immédiatement l'utilisation systématique du suffixe honorifique
+さん \romaji{san} pour désigner les membres de la famille.
+
+Notez également que vous pouvez utiliser les mots pour grand-père et
+grand-mère pour vous adresser à des personnes âgées inconnues qui ont l'âge
+de vos grand-parents.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\sectit{Vocabulaire}
+
+\hspace{5mm}\begin{tabular}{|p{2cm}p{4.5cm}l}
+    家族     & かぞく \romaji{kazoku}            & Famille, membres de la famille \\
+    お爺さん     & おじいさん \romaji{ojiisan}   & Grand-père \\
+    お婆さん  & おばあさん \romaji{obaasan}  & Grand-mère \\
+    両親     & りょうしん \romaji{ry\=oshin} & Parents \\
+    お父さん  & おとうさん \romaji{ot\=osan} & Père \\
+    お母さん  & おかあさん \romaji{okaasan}  & Mère \\
+    お兄さん  & おにいさん \romaji{oniisan}  & Grand frère \\
+    お姉さん  & おねえさん \romaji{oneesan}  & Grande s\oe ur \\
+    弟さん  & おとうとさん \romaji{ot\=otosan}  & Petit frère \\
+    妹さん  & いもうとさん \romaji{im\=otosan}  & Petite s\oe ur
+\end{tabular}
+
+\end{document}

@@ -4,6 +4,8 @@ This repository contains resources to learn Japanese for French speaking people.
 
 ## Thematic Sheets
 
+Seven thematics sheets are currently available:
+
 - Close members of another family
 - Counting from 1 to 10
 - Counting from 11 to 100
@@ -12,6 +14,11 @@ This repository contains resources to learn Japanese for French speaking people.
 - Saying goodbye
 - Saying hello
 
+To compile the `.tex` files to PDF files, you have to use the XeLaTeX compiler. For example:
+
+    xelatex counting-1-10.tex
+
 ## Contributors
 
 - Sébastien Combéfis
+- Alexis Nootens
